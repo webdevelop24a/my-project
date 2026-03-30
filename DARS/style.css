@@ -1,0 +1,196 @@
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color:red;
+  border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+  background:white;
+}
+
+
+
+.header_srv{
+    height: 40px;
+    background-color: red;
+    text-align: center;
+}
+.header_srv a{
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+.header_srv a:hover{
+    color: rgb(184, 162, 162);
+}
+
+
+
+
+.navbar .logo img{
+    width: 200px;
+}
+
+
+.menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+    margin-top: 40px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+    font-weight: bold;
+}
+
+.menu a:hover{
+    text-decoration:underline 2px ;
+    color: #d9d9d9;
+}
+.menu .active{
+    background-color:#e5390f;
+    padding:6px 12px;
+    border-radius:5px;
+    cursor: pointer;
+}
+.menu .active:hover{
+    text-decoration: none;
+}
+
+
+
+.head-body{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.h-body-text h2{
+    font-size: 120px;
+    width: 100px;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    color: white;
+    line-height: 0.8;
+}
+
+.h-body-text p{
+    width: 600px;
+    color: rgb(223, 210, 210);
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+.h-body-text .btn{
+    width: 150px;
+    height: 45px;
+    background-color: #e5390f;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.h-body-text .btn:hover{
+    color: white;
+    box-shadow: 0px 5px 10px rgb(255, 255, 255);
+}
+
+
+.h-body-text-l{
+    width: 600px;
+    position: absolute; 
+    top: 300px;     
+    right: 50px;   
+    font-size: 100px;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    color: white;
+    opacity: 0.6;
+    filter: blur(6px);
+    transition: 0.5s;  
+    cursor: pointer;
+}
+
+.h-body-text-l:hover{
+    opacity: 1;
+    filter: blur(0);
+}
+
+.btns{
+  display:flex;
+  gap:15px;
+  justify-content:flex-end;
+  margin-top: -50px;
+}
+
+.btns button{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    border:none;
+    background-color:white;
+    font-size:24px;
+    cursor:pointer;
+    opacity:0.4;
+}
+
+
+
+.h-body-text h2,
+.h-body-text p,
+.h-body-text-l span {
+    opacity: 0;              
+    transform: translateY(20px); 
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.h-body-text.show h2,
+.h-body-text.show p,
+.h-body-text-l.show span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.head_bg_img{
+    height: 96vh;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

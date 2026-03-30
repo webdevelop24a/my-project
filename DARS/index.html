@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzb | Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <header>
+         <div class="header_srv">
+            <a href="#">Безопасность и особенности путешествий по Узбекистану</a>
+        </div>
+        <div class="head_bg_img" id="slider">
+            <div class="container">
+
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="img/uzlogo_white.png" alt="logo">
+                    </div>
+
+                    <ul class="menu">
+                        <li><a href="#">Города</a></li>
+                        <li><a href="#">Виды туризма</a></li>
+                        <li><a href="#">Достопримечательности</a></li>
+                        <li><a href="#">Туристическим агентствам</a></li>
+                        <li><a href="#">Афиша мероприятий</a></li>
+                        <li><a class="active" href="#">Фото и видео</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="head-body">
+                    <div class="h-body-text">
+                        <h2>Узбекская кухня</h2>
+
+                        <p>"Ароматный плов, аппетитный козон-кабоб, самса, лепешки и шурпа –  изумляют своим колоритом и бесподобным вкусом жителей и гостей Узбекистана."</p>
+
+                        <button type="button" class="btn">Подробнее</button>
+                    </div>
+
+                    <div class="h-body-text-l" id="sideText">
+                        <span>Архитектура</span>
+                    </div>
+                </div>
+                
+                <div class="btns">
+                    <button class="prev">←</button>
+                    <button class="next">→</button>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+let slides = [
+    {
+        img: "img/thumb_4679_1920_1080_0_0_crop.webp",
+        title: "Узбекская кухня",
+        text: '"Ароматный плов, аппетитный козон-кабоб, самса, лепешки и шурпа – изумляют своим колоритом и бесподобным вкусом жителей и гостей Узбекистана."',
+        side: "Архитектура"
+    },
+    {
+        img: "img/thumb_4678_1920_1080_0_0_crop.webp",
+        title: "Архитектура",
+        text: '"Величественные архитектурные ансамбли, дворцы, мечети и минареты, украшенные голубой мозаикой и красочной росписью в течении многих веков поражают взоры миллионов гостей Узбекистана"',
+        side: "Культурное наследие"
+    },
+    {
+        img: "img/thumb_4677_1920_1080_0_0_crop.webp",
+        title: "Культурное наследие",
+        text: '"Культура Узбекистана имеет богатейшую историю, которая неразрывно была связана многовековыми традициями и укладом жизни народов Центральной Азии"',
+        side: "Узбекская кухня"
+    }
+];
+
+let index = 0;
+let slider = document.getElementById("slider");
+let hTitle = document.querySelector(".h-body-text h2");
+let hText = document.querySelector(".h-body-text p");
+let sideText = document.getElementById("sideText");
+
+function showSlide(i){
+    hTitle.parentElement.classList.remove("show");
+    sideText.classList.remove("show");
+
+    slider.classList.add("fade-out");
+
+    setTimeout(() => {
+        slider.style.backgroundImage = `url(${slides[i].img})`;
+        hTitle.textContent = slides[i].title;
+        hText.textContent = slides[i].text;
+        sideText.querySelector("span").textContent = slides[i].side;
+
+        slider.classList.remove("fade-out");
+        hTitle.parentElement.classList.add("show");
+        sideText.classList.add("show");
+    }, 400);
+}
+document.querySelector(".next").onclick = () => {
+    index++;
+    if(index >= slides.length) index = 0;
+    showSlide(index);
+}
+
+document.querySelector(".prev").onclick = () => {
+    index--;
+    if(index < 0) index = slides.length - 1;
+    showSlide(index);
+}
+
+
+showSlide(index);
+
+</script>
+</body>
+</html>
